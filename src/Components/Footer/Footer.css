@@ -1,0 +1,101 @@
+@import url("/src/main.css");
+
+.columns {
+	background-color: var(--clr-neutral-700);
+	color: var(--clr-neutral-000);
+	position: relative;
+	bottom: 0;
+	padding: 0 10rem 3rem;
+}
+
+.navbar-sub {
+	padding: 4rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.to-top {
+	position: absolute;
+	top: 0;
+
+	padding: 0.0625rem 2rem;
+}
+
+.bottom {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.bottom-left {
+	display: grid;
+	gap: 3rem;
+}
+
+.description-2 {
+	font-size: 0.90625rem;
+}
+
+.rights {
+	color: var(--clr-neutral-100);
+	font-size: 1rem;
+	font-weight: var(--fw-500);
+}
+
+.social-links {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.social-links img:hover {
+	cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1024px) {
+	.columns {
+		padding: 2rem;
+	}
+
+	.bottom {
+		grid-template-columns: 1fr;
+	}
+
+	.navbar-sub {
+		padding: 2rem 0;
+		flex-direction: column;
+		align-items: start;
+		gap: 2rem;
+	}
+
+	.description-2 {
+		font-size: 0.95rem;
+	}
+
+	.rights {
+		font-size: 0.9rem;
+		font-weight: var(--fw-400);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.columns {
+		text-align: center;
+	}
+
+	.navbar-sub {
+		align-items: center;
+	}
+
+	.social-links {
+		margin: 2rem 0;
+
+		color: white;
+	}
+
+	.social-links img:hover {
+		fill: #fff;
+		cursor: pointer;
+	}
+}

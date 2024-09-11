@@ -1,0 +1,33 @@
+
+
+.navlink-active {
+    color: var(--clr-primary-200);
+}
+
+
+
+.navbar-sub {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding-top: 4rem 0;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.navlinks {
+		flex-direction: column;
+		gap: 1.75rem;
+	}
+
+    .navbar-sub {
+	display: flex;
+	justify-content: center;
+
+    padding: 1rem 0;
+		flex-direction: column;
+		gap: 2rem;
+}
+
+
+}

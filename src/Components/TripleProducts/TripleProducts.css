@@ -1,0 +1,109 @@
+@import url("/src/main.css");
+
+.display-container-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(4rem, 100%), 1fr));
+	gap: 2rem;
+	padding: var(--padding-side);
+	margin: 7rem 0 5rem;
+	width: 100%;
+	flex-wrap: wrap;
+	position: relative;
+	/* z-index: -999; */
+}
+
+.display-container {
+	position: relative;
+	background-color: var(--clr-neutral-050);
+	padding: 4rem 3rem 2rem;
+	border-radius: 0.75rem;
+	text-align: center;
+	
+}
+
+.display-product {
+	width: 12rem;
+	position: absolute;
+	left: 50%;
+	bottom: -5%;
+	transform: translate(-50%, -50%);
+}
+
+.display-product-name {
+	color: var(--clr-neutral-700);
+	font-size: 1.125rem;
+	font-weight: var(--fw-500);
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	margin-top: 2rem;
+}
+
+.shop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	color: var(--clr-neutral-100);
+	font-size: 0.85rem;
+	font-weight: var(--fw-500);
+	margin-top: 0.5rem;
+	text-transform: uppercase;
+}
+
+.display-container-wrapper a:hover .shop {
+	color: var(--clr-primary-200);
+}
+
+@media only screen and (max-width: 1024px) {
+	.display-container-wrapper {
+		gap: 1rem;
+		padding: var(--padding-side);
+		margin: 5rem 0 2rem;
+		width: 100%;
+	}
+
+	.display-container {
+		position: relative;
+		background-color: var(--clr-neutral-050);
+		padding: 2rem 1rem 2rem;
+		border-radius: 0.75rem;
+		text-align: center;
+		width: clamp(10rem, 100%, 30rem);
+	}
+
+	.display-product {
+		width: 9rem;
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		transform: translate(-50%, -50%);
+	}
+
+	.display-product-name {
+		font-size: 0.95rem;
+	}
+
+	.shop {
+		gap: 0.5rem;
+		font-size: 0.8rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.display-container-wrapper {
+		grid-template-columns: 1fr;
+		gap: 5rem;
+		padding: var(--padding-side);
+		margin: 3.5rem 0 0;
+		width: 100%;
+	}
+
+	.display-container {
+		padding: 4rem 1rem 2rem;
+		/* width: clamp(10rem, 100%, 30rem); */
+	}
+
+	.display-product {
+		width: 10rem;
+	}
+}

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+/* CSS Imports */
+@import url("/src/Components/Navbar/Navbar.css");
+@import url("/src/Components/NavbarSub/NavbarSub.css");
+@import url("/src/Components/HeroSection/HeroSection.css");
+@import url("/src/Components/CartModal/CartModal.css");
+@import url("/src/Components/Footer/Footer.css");
+@import url("/src/Components/Biography/Biography.css");
+@import url("/src/Components/Banner/Banner.css");
+@import url("/src/Components/Products/Products.css");
+@import url("/src/Components/Product/Product.css");
+@import url("/src/Components/BackButton/BackButton.css");
+@import url("/src/Components/TripleProducts/TripleProducts.css");
+@import url("/src/Components/HomeMiddle/HomeMiddle.css");
+@import url("/src/Pages/ProductPage/ProductPage.css");
+@import url("/src/Pages/CheckoutPage/CheckoutPage.css");
+@import url("/src/Components/ThankYouModal/ThankYouModal.css");
+@import url("/src/Components/Loader/Loader.css");
+@import url("/src//Pages/Error/ErrorPage.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--ff-roboto), system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	background-position: center;
+	accent-color: hsl(22, 65%, 56%);
+}
+
+:root {
+	--clr-primary-100: hsl(21, 94%, 75%);
+	--clr-primary-200: #d97e4a;
+
+	--clr-neutral-000: hsl(0, 0%, 100%);
+	--clr-neutral-050: hsl(0, 0%, 95%);
+	--clr-neutral-050-divider: hsla(0, 0%, 95%, 0.3);
+	--clr-neutral-050-input: hsl(0, 0%, 82%);
+	--clr-neutral-100: hsl(192, 4%, 54%);
+	--clr-neutral-200: hsl(224, 5%, 53%);
+	--clr-neutral-300: hsl(0, 1%, 39%);
+	--clr-neutral-400: hsl(228, 7%, 28%);
+	--clr-neutral-500: hsl(196, 7%, 29%);
+	--clr-neutral-600: hsl(0, 0%, 20%);
+	--clr-neutral-700: hsl(0, 2%, 10%);
+
+	--clr-error-100: hsla(354, 84%, 57%, 0.071);
+	--clr-error-200: hsla(354, 84%, 57%, 0.65);
+	--clr-error-300: hsl(354, 84%, 57%);
+
+	--ff-roboto: "Roboto", sans-serif;
+	--fs-regular: 16px;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+
+	--padding-hero: 10rem;
+	--padding-side: 1.75rem 10rem;
+	--padding-navbar: 1.75rem 0;
+	--padding-header: 0 10rem;
+	--padding-btn: 0.75rem 1.75rem;
+
+	@media only screen and (max-width: 1024px) {
+		--padding-hero: 13rem 2rem;
+		--padding-side: 1.75rem 2rem;
+		--padding-header: 0 2rem;
+		--padding-btn: 0.9rem 1.5rem;
+	}
+	@media only screen and (max-width: 480px) {
+		--padding-hero: 9rem 1.5rem;
+
+		--padding-side: 1.75rem 1.5rem;
+		--padding-header: 0 1.5rem;
+		--padding-btn: 1rem 1.25rem;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding: 1rem;
+}
+
+body {
+	background: var(--clr-neutral-000);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+	text-wrap: pretty;
+	max-width: 65ch;
+}
+
+/* Remove arrows from number input fields in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+}

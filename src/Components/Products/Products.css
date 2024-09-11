@@ -1,0 +1,122 @@
+@import url("/src/main.css");
+
+.product-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.product-section-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 7rem;
+	flex-wrap: wrap;
+
+	width: 100%;
+	padding: 0 10rem;
+	margin-bottom: 2rem;
+	color: var(--clr-neutral-000);
+}
+
+.product-section {
+	justify-self: center;
+	order: 1;
+}
+
+.product-section:nth-child(2n) {
+	grid-column: 2;
+}
+
+.new-product-section {
+	color: var(--clr-primary-200);
+	letter-spacing: 0.5rem;
+	font-weight: var(--fw-400);
+	text-transform: uppercase;
+}
+
+.product-name {
+	color: var(--clr-neutral-700);
+	font-size: 3rem;
+	line-height: 1;
+	font-weight: 500;
+}
+
+.product-description {
+	color: var(--clr-neutral-100);
+	line-height: 1.7;
+	font-size: 1rem;
+	font-weight: var(--fw-400);
+}
+
+.product-price {
+	font-weight: var(--fw-500);
+	color: var(--clr-neutral-700);
+	letter-spacing: 0.75px;
+}
+
+.product-image-container {
+	width: 100%;
+}
+
+.product-image-container img {
+	border-radius: 0.65rem;
+	width: 100%;
+}
+
+.product-section-container:nth-of-type(even) > *:first-child {
+	order: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+	.product-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5rem;
+	}
+
+	.product-description {
+		color: var(--clr-neutral-100);
+		line-height: 1.7;
+		font-size: 1rem;
+		font-weight: var(--fw-400);
+	}
+
+	.product-section-container {
+		grid-template-columns: 1fr;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		padding: 0 2rem;
+	}
+
+	.product-section-container:nth-of-type(even) > *:first-child {
+		order: 1;
+	}
+
+	.orange-btn {
+		font-size: 0.85rem;
+	}
+
+	.hero-section-description {
+		gap: 1rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.product-section-container {
+		gap: 1.75rem;
+		margin-bottom: 4rem;
+	}
+
+	.product-wrapper {
+		gap: 1rem;
+	}
+
+	.product-name {
+		font-size: 2.25rem;
+		font-weight: var(--fw-400);
+	}
+}

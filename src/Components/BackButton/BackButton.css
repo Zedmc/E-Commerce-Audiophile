@@ -1,0 +1,27 @@
+.back-button {
+	margin: 1rem 10rem;
+	padding: 1rem 0;
+	border: none;
+	background-color: transparent;
+	color: var(--clr-neutral-100);
+	font-size: var(--fs-regular);
+	cursor: pointer;
+
+	&:hover {
+		color: var(--clr-primary-200);
+		transition-duration: 150ms;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.back-button {
+		margin: 2rem 2rem 1rem;
+		padding: 1rem 0 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.back-button {
+		margin: 1rem 2rem 0;
+	}
+}

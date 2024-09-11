@@ -1,0 +1,210 @@
+@import url("/src/main.css");
+
+.container-wrapper {
+	padding: var(--padding-side);
+	display: grid;
+	gap: 3rem;
+	position: relative;
+}
+
+.home-container {
+	border-radius: 0.75rem;
+}
+
+.first-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10rem;
+
+	background-color: var(--clr-primary-200);
+	background-image: url(/images/home/desktop/image-speaker-zx9.png),
+		url(/images/home/desktop/pattern-circles.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-size: 25rem, 65rem;
+	background-position: 15% 110%, -12.5rem -5rem;
+	padding: 14rem 2rem 14rem;
+
+	position: relative;
+}
+
+.text-container-home {
+	color: var(--clr-neutral-000);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1.75rem;
+}
+
+.text-container-product {
+	font-size: 4rem;
+	font-weight: var(--fw-500);
+	line-height: 1.1;
+}
+
+.text-container-description {
+	font-size: 0.925rem;
+	line-height: 1.5;
+}
+
+.text-container-btn {
+	background-color: var(--clr-neutral-700);
+
+	&:hover {
+		background-color: var(--clr-neutral-500);
+		color: var(--clr-neutral-000);
+	}
+}
+
+.second-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 7rem 5rem;
+	background-image: url(/images/home/desktop/image-speaker-zx7.jpg);
+	background-size: cover;
+}
+
+.third-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+.first {
+	background-image: url(/images/home/desktop/image-earphones-yx1.jpg);
+	background-position: center;
+	background-size: cover;
+	/* padding: 7rem 5rem; */
+}
+
+.second {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+	padding: 7rem 5rem;
+	background-color: var(--clr-neutral-050);
+}
+
+.container-title {
+	font-size: 2rem;
+	font-weight: var(--fw-500);
+}
+
+.container-btn {
+	background-color: transparent;
+	padding: var(--padding-btn);
+	border: 2px solid var(--clr-neutral-700);
+	margin-top: 1.5rem;
+	letter-spacing: 0.75px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(0.99);
+	}
+	&:hover {
+		background-color: var(--clr-neutral-700);
+		color: var(--clr-neutral-000);
+
+		transition: 200ms ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.first-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 2rem;
+
+		background-image: url(/images/home/tablet/image-speaker-zx9.png),
+			url(/images/home/desktop/pattern-circles.svg);
+		background-size: 12.5rem, 60rem;
+		background-position: 50% 15%, 50% 100%;
+		padding: 20rem 2rem 3rem;
+	}
+
+	.text-container-home {
+		align-items: center;
+		width: 20rem;
+		text-align: center;
+		gap: 1.25rem;
+	}
+
+	.second-container {
+		background-image: url(/images/home/tablet/image-speaker-zx7.jpg);
+		padding: 7rem 4rem;
+	}
+
+	.third-container {
+		gap: 1rem;
+	}
+
+	.first {
+		background-image: url(/images/home/tablet/image-earphones-yx1.jpg);
+		padding: 7rem 4rem;
+	}
+
+	.second {
+		padding: 7rem 4rem;
+	}
+
+	.text-container-product {
+		font-size: 4rem;
+		font-weight: var(--fw-500);
+		line-height: 0.9;
+	}
+
+	.text-container-btn {
+		font-size: 0.95rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.container-wrapper {
+		grid-template-columns: 1fr;
+		gap: 1.75rem;
+	}
+
+	.text-container-product {
+		font-size: 3.5rem;
+		font-weight: var(--fw-400);
+	}
+
+	.first-container {
+		background-image: url(/images/home/mobile/image-speaker-zx9.png),
+			url(/images/home/desktop/pattern-circles.svg);
+		align-items: center;
+		gap: 2rem;
+
+		background-size: 10rem, 40rem;
+		background-position: 50% 15%, 50% -9rem;
+		padding: 20rem 0rem 3rem;
+	}
+
+	.second-container {
+		background-image: url(/images/home/mobile/image-speaker-zx7.jpg);
+		padding: 7rem 3rem;
+	}
+
+	.third-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.first {
+		background-image: url(/images/home/mobile/image-earphones-yx1.jpg);
+		padding: 7rem 4rem;
+	}
+
+	.second {
+		padding: 7rem 3rem;
+	}
+}

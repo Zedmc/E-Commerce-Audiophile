@@ -1,0 +1,88 @@
+@import url("/src/main.css");
+
+.biography-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	place-content: center;
+	gap: 6rem;
+
+	padding: var(--padding-side);
+	margin: 3rem 0;
+}
+
+.text-container {
+	display: grid;
+	place-content: center;
+	gap: 2rem;
+}
+
+.biography-title {
+	font-size: 3rem;
+	font-weight: var(--fw-500);
+	line-height: 1.1;
+}
+.biography-title .biography-span {
+	color: var(--clr-primary-200);
+}
+
+.image-container {
+	background-image: url("/images/shared/desktop/image-best-gear.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 18rem 2rem;
+	border-radius: 0.75rem;
+}
+
+.image-container img {
+	border-radius: 0.75rem;
+	width: 100%;
+	object-fit: contain;
+}
+
+@media only screen and (max-width: 1024px) {
+	.biography-container {
+		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 2.5rem;
+
+		padding: var(--padding-side);
+		text-align: center;
+		margin: 2rem 0;
+	}
+
+	.text-container {
+		display: grid;
+		place-content: center;
+		gap: 1rem;
+	}
+
+	.biography-title {
+		font-size: 2.5rem;
+		line-height: 1.1;
+	}
+
+	.biography-description.description {
+		font-size: 1.25rem;
+	}
+
+	.image-container {
+		background-image: url("/images/shared/tablet/image-best-gear.jpg");
+		padding: 10rem 2rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.biography-title {
+		font-size: 2rem;
+		font-weight: var(--fw-400);
+	}
+
+	.biography-description.description {
+		font-size: 1.125rem;
+	}
+
+	.image-container {
+		background-image: url("/images/shared/mobile/image-best-gear.jpg");
+	}
+}
