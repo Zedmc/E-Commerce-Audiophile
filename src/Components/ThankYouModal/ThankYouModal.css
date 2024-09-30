@@ -45,15 +45,15 @@
 }
 
 .order-box {
-	width: 100%;
-	border-radius: 0.85rem;
-	overflow: hidden;
-	height: max-content;
-	background-color: var(--clr-neutral-050);
-
 	display: grid;
 	grid-template-columns: 3fr 1.25fr;
 	align-items: center;
+
+	/* width: 100%; */
+	border-radius: 0.85rem;
+	overflow: hidden;
+	/* height: max-content; */
+	background-color: var(--clr-neutral-050);
 }
 
 .order-box-left {
@@ -62,7 +62,6 @@
 	justify-content: center;
 	gap: 1rem;
 
-	background-color: var(--clr-neutral-050);
 	height: min-content;
 	height: 100%;
 	overflow: scroll;
@@ -117,14 +116,11 @@
 }
 
 .order-box-right {
-	height: 100%;
-	max-height: min-content;
-	/* min-height: inherit; */
-	background-color: var(--clr-neutral-700);
-
 	display: grid;
 	place-content: center;
-	/* overflow-y: hidden; */
+
+	height: 100%;
+	background-color: var(--clr-neutral-700);
 }
 
 .order-box-right h3:first-child {
@@ -162,6 +158,17 @@
 		font-size: 2rem;
 	}
 
+	.order-box-right {
+		padding-inline: 0.5rem;
+	}
+	.order-box-right h3:first-child {
+		font-size: 0.9rem;
+	}
+
+	.order-box-right h3:last-child {
+		margin-top: 0.25rem;
+	}
+
 	.order-box-left {
 		gap: 0.75rem;
 		padding: 1rem;
@@ -171,7 +178,6 @@
 @media only screen and (max-width: 480px) {
 	.order-content {
 		width: 22rem;
-		/* min-height: 36rem; */
 		height: fit-content;
 		padding: 2.25rem;
 		gap: 2rem;
@@ -186,7 +192,6 @@
 	}
 
 	.order-box {
-		width: 100%;
 		border-radius: 0.85rem;
 		overflow: hidden;
 		height: 12rem;
@@ -205,6 +210,7 @@
 
 	.order-box-right {
 		padding: 0.75rem 0;
+		text-align: center;
 	}
 
 	.order-box-right h3:first-child {
@@ -212,7 +218,6 @@
 	}
 
 	.order-box-right h3:last-child {
-		margin-top: 0.25rem;
 		font-weight: var(--fw-400);
 		font-size: 0.95rem;
 	}

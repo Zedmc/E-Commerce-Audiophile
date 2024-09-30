@@ -64,7 +64,6 @@ const router = createBrowserRouter([
 			},
 		],
 	},
-
 	{
 		path: "*",
 		element: <ErrorPage WarningMessage={"404 | Page Not Found"} />,
@@ -74,9 +73,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
 		{/* <QueryClientProvider client={queryClient}> */}
-			<ContextProvider>
-				<RouterProvider router={router} />
-			</ContextProvider>
+		<ContextProvider>
+			<RouterProvider router={router} />
+		</ContextProvider>
 		{/* </QueryClientProvider> */}
 	</React.StrictMode>
 );
