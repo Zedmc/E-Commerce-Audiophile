@@ -13,7 +13,6 @@ import ErrorPage from "./Pages/Error/ErrorPage.jsx";
 import HomePage from "./Pages/HomePage/HomePage.jsx";
 import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage.jsx";
 import "react-toastify/dist/ReactToastify.css";
-import ThankYouModal from "./Components/ThankYouModal/ThankYouModal.jsx";
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ProtectedRoutes from "./Protected Routes/ProtectedRoutes.jsx";
 
